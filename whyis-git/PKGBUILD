@@ -1,7 +1,7 @@
 _pkgname=whyis
 pkgname="$_pkgname"-git
-pkgver=0.0.1
-pkgrel=1
+pkgver=0.1.0.r1.g767609e
+pkgrel=2
 pkgdesc="A simple linux troubleshooting utility."
 arch=('any')
 url="https://github.com/xZepyx/whyis"
