@@ -1,0 +1,13 @@
+pkgbase = whyis-git
+	pkgdesc = A simple linux troubleshooting utility.
+	pkgver = 0.0.1
+	pkgrel = 1
+	url = https://github.com/xZepyx/whyis
+	arch = any
+	license = MIT
+	makedepends = git
+	makedepends = nim
+	source = git+https://github.com/xZepyx/whyis
+	sha256sums = SKIP
+
+pkgname = whyis-git
