@@ -21,8 +21,11 @@ package() {
     cd "$pkgdir/usr/lib/$pkgname"
     mkdir -p "$pkgdir/usr/bin"
 
-    ln -s "/usr/lib/$pkgname/dist/cli.js" "$pkgdir/usr/bin/$pkgname"
+    bin="/usr/lib/$pkgname/dist/cli.js"
 
+    ln -s "$bin" "$pkgdir/usr/bin/$pkgname"
+
+    sudo chmod +x "$bin"
     install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
     install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
