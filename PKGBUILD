@@ -1,17 +1,18 @@
 pkgname=instagram-cli
 pkgver=1.4.0
-pkgrel=3
+pkgrel=5
 pkgdesc="Instagram's terminal UI app - The ultimate weapon against brainrot"
 arch=('any')
 url="https://github.com/supreme-gg-gg/instagram-cli"
 license=('MIT')
 depends=('nodejs>=20')
+makedepends=('nodejs>=20')
 source=('https://registry.npmjs.org/@i7m/instagram-cli/-/instagram-cli-1.4.0.tgz')
 sha256sums=('e38b98ab331de279459b7245630c785f91ad5c32c683ac1eccb9bca6f2884b1a')
 
 prepare() {
     cd "$srcdir/package"
-    npm install
+    env npm install
 }
 
 package() {
@@ -25,7 +26,7 @@ package() {
 
     ln -s "$bin" "$pkgdir/usr/bin/$pkgname"
 
-    sudo chmod +x "$bin"
+    chmod +x "$pkgdir/$bin"
     install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
     install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
