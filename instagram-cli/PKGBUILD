@@ -1,6 +1,6 @@
 pkgname=instagram-cli
 pkgver=1.4.0
-pkgrel=1
+pkgrel=2
 pkgdesc="Instagram's terminal UI app - The ultimate weapon against brainrot"
 arch=('any')
 url="https://github.com/supreme-gg-gg/instagram-cli"
