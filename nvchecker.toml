@@ -6,3 +6,8 @@ newver = "new_ver.json"
 source = "github"
 github = "vupdivup/typomat"
 use_latest_release = true
+
+[instagram-cli]
+source = "github"
+github = "supreme-gg-gg/instagram-cli"
+use_latest_release = true
