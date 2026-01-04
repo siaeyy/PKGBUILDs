@@ -1,10 +1,14 @@
 {
   "version": 2,
   "data": {
+    "instagram-cli": {
+      "version": "ts-v1.3.1",
+      "gitref": "refs/tags/ts-v1.3.1",
+      "url": "https://github.com/supreme-gg-gg/instagram-cli/releases/tag/ts-v1.3.1"
+    },
     "typomat": {
       "version": "v0.1.3",
       "gitref": "refs/tags/v0.1.3",
-      "revision": "2baf227a228ab6ff3796603db0784fea3940059a",
       "url": "https://github.com/vupdivup/typomat/releases/tag/v0.1.3"
     }
   }
