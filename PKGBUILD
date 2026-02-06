@@ -1,3 +1,11 @@
+# If you have a problem/question or want to improve this PKGBUILD,
+# you can create an issue/pull request on this Github repository:
+#
+# https://github.com/siaeyy/PKGBUILDs
+#
+# You can still use the Arch website as well.
+#
+
 pkgname=instagram-cli
 pkgver=1.4.2
 pkgrel=1
