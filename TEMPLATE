@@ -1,0 +1,41 @@
+# https://gist.github.com/valeth/f94e42cd9ecf76034ef7
+
+pkgname=NAME
+pkgver=VERSION
+pkgrel=1
+epoch=
+pkgdesc=""
+arch=()
+url=""
+license=('MIT')
+groups=()
+depends=()
+makedepends=()
+checkdepends=()
+optdepends=()
+provides=()
+conflicts=()
+replaces=()
+backup=()
+options=()
+install=
+changelog=
+source=()
+noextract=()
+md5sums=()
+
+prepare() {
+	cd "$srcdir/$pkgname-$pkgver"
+}
+
+build() {
+	cd "$srcdir/$pkgname-$pkgver"
+}
+
+check() {
+	cd "$srcdir/$pkgname-$pkgver"
+}
+
+package() {
+	cd "$srcdir/$pkgname-$pkgver"
+}
