@@ -1,4 +1,12 @@
-# https://gist.github.com/valeth/f94e42cd9ecf76034ef7
+# Thanks: https://gist.github.com/valeth/f94e42cd9ecf76034ef7
+
+# If you have a problem/question or want to improve this PKGBUILD,
+# you can create an issue/pull request on this Github repository:
+#
+# https://github.com/siaeyy/PKGBUILDs
+#
+# You can still use the Arch website as well.
+#
 
 pkgname=NAME
 pkgver=VERSION
