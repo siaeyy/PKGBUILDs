@@ -1,6 +1,6 @@
 _pkgname=whyis
 pkgname="$_pkgname"-git
-pkgver=0.1.0.r1.g767609e
+pkgver=0.2.0.r2.g767609e
 pkgrel=2
 pkgdesc="A simple linux troubleshooting utility."
 arch=('any')

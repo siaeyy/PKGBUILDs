@@ -1,6 +1,6 @@
 pkgbase = whyis-git
 	pkgdesc = A simple linux troubleshooting utility.
-	pkgver = 0.1.0.r1.g767609e
+	pkgver = 0.2.0.r2.g767609e
 	pkgrel = 2
 	url = https://github.com/xZepyx/whyis
 	arch = any
