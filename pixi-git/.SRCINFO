@@ -1,7 +1,7 @@
 pkgbase = pixi-git
 	pkgdesc = Pixel art editor made with Zig.
 	pkgver = 0.1.0.r796.g4e0a8736
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/foxnne/pixi.git
 	arch = any
 	license = MIT
