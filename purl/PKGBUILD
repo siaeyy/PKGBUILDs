@@ -8,7 +8,7 @@
 
 pkgname=purl
 pkgver=0.1.0
-pkgrel=1
+pkgrel=2
 pkgdesc="A curl-esque CLI for making HTTP requests that require payment. Designed for humans and agents alike."
 arch=('any')
 url="https://github.com/stripe/purl"
@@ -19,7 +19,7 @@ checkdepends=('rust')
 source=("$pkgname-$pkgver.tar.gz::$url/archive/v$pkgver.tar.gz")
 sha256sums=('SKIP')
 
-prepare() {
+check() {
 	cd "$srcdir/$pkgname-$pkgver"
 	cargo clippy -- -D warnings
 	cargo test

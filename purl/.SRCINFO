@@ -1,7 +1,7 @@
 pkgbase = purl
 	pkgdesc = A curl-esque CLI for making HTTP requests that require payment. Designed for humans and agents alike.
 	pkgver = 0.1.0
-	pkgrel = 1
+	pkgrel = 2
 	url = https://github.com/stripe/purl
 	arch = any
 	license = MIT
