@@ -7,16 +7,16 @@
 #
 
 pkgname=instagram-cli
-pkgver=1.4.2
-pkgrel=2
+pkgver=1.5.0
+pkgrel=1
 pkgdesc="Instagram's terminal UI app - The ultimate weapon against brainrot"
 arch=('any')
 url="https://github.com/supreme-gg-gg/instagram-cli"
 license=('MIT')
-depends=('nodejs>=20')
-makedepends=('nodejs>=20')
+depends=('nodejs>=22')
+makedepends=('nodejs>=22')
 source=("https://registry.npmjs.org/@i7m/instagram-cli/-/instagram-cli-$pkgver.tgz")
-sha256sums=('e3d7eaf0e11cd6567e761ab88b6cb50e31e820e93e92b8a485cf8c68ed561eb2')
+sha256sums=('cebc50d8a85db293f5a3d4ca6b8193589c97b5dd81500ebc7a19dc08c9557236')
 
 prepare() {
     cd "$srcdir/package"
