@@ -1,13 +1,15 @@
 pkgbase = instagram-cli
 	pkgdesc = Instagram's terminal UI app - The ultimate weapon against brainrot
-	pkgver = 1.4.2
-	pkgrel = 2
+	pkgver = 2.0.1
+	pkgrel = 1
 	url = https://github.com/supreme-gg-gg/instagram-cli
 	arch = any
 	license = MIT
-	makedepends = nodejs>=20
-	depends = nodejs>=20
-	source = https://registry.npmjs.org/@i7m/instagram-cli/-/instagram-cli-1.4.2.tgz
-	sha256sums = e3d7eaf0e11cd6567e761ab88b6cb50e31e820e93e92b8a485cf8c68ed561eb2
+	makedepends = npm
+	depends = nodejs>=22
+	options = !strip
+	options = !debug
+	source = https://registry.npmjs.org/@i7m/instagram-cli/-/instagram-cli-2.0.1.tgz
+	sha256sums = 80e83d6093daa27fa3b0683db2fceff3adddc18f695253ede6fa909a0a5f1bb8
 
 pkgname = instagram-cli
