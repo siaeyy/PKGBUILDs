@@ -7,34 +7,36 @@
 #
 
 pkgname=instagram-cli
-pkgver=1.4.2
-pkgrel=2
+pkgver=2.1.0
+pkgrel=1
 pkgdesc="Instagram's terminal UI app - The ultimate weapon against brainrot"
 arch=('any')
 url="https://github.com/supreme-gg-gg/instagram-cli"
 license=('MIT')
-depends=('nodejs>=20')
-makedepends=('nodejs>=20')
+depends=('nodejs>=22')
+makedepends=('npm')
+options=('!strip' '!debug')
 source=("https://registry.npmjs.org/@i7m/instagram-cli/-/instagram-cli-$pkgver.tgz")
-sha256sums=('e3d7eaf0e11cd6567e761ab88b6cb50e31e820e93e92b8a485cf8c68ed561eb2')
+sha256sums=('6b2a6a2aa5760263656c03256e0be995efa27adf8cf209dbccfd9742a314efe6')
 
-prepare() {
+build() {
     cd "$srcdir/package"
-    env npm install
+    # Runtime deps only; skip lifecycle scripts (prepare runs husky, a dev
+    # dependency) and apply the bundled patches explicitly instead.
+    npm install --omit=dev --ignore-scripts --no-audit --no-fund \
+        --cache "$srcdir/npm-cache"
+    node node_modules/patch-package/index.js
+    # Stray prebuilt CI binary shipped in the ts-custom-error tarball
+    find node_modules -type f -name codeclimate-reporter -delete
 }
 
 package() {
-    install -d "$pkgdir/usr/lib/$pkgname"
-    mv "$srcdir/package/"* "$pkgdir/usr/lib/$pkgname/"
+    cd "$srcdir/package"
+    install -d "$pkgdir/usr/lib/$pkgname" "$pkgdir/usr/bin"
+    cp -a dist node_modules package.json "$pkgdir/usr/lib/$pkgname/"
+    chmod 755 "$pkgdir/usr/lib/$pkgname/dist/cli.js"
+    ln -s "/usr/lib/$pkgname/dist/cli.js" "$pkgdir/usr/bin/$pkgname"
 
-    cd "$pkgdir/usr/lib/$pkgname"
-    mkdir -p "$pkgdir/usr/bin"
-
-    bin="/usr/lib/$pkgname/dist/cli.js"
-
-    ln -s "$bin" "$pkgdir/usr/bin/$pkgname"
-
-    chmod +x "$pkgdir/$bin"
     install -Dm644 README.md "$pkgdir/usr/share/doc/$pkgname/README.md"
     install -Dm644 LICENSE "$pkgdir/usr/share/licenses/$pkgname/LICENSE"
 }
